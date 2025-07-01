@@ -20,8 +20,8 @@ jobs:
 
       - name: Commit & Push
         run: |
-          git config user.name "Jade-Good"
-          git config user.email "kangsm423@gmail.com"
+          git config user.name "nkcfe"
+          git config user.email "chul.develop@gmail.com"
           git add -A
           git commit -m "Generated 3D Contribution Graph" || echo "Nothing to commit"
           git push
