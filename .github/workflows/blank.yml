@@ -15,7 +15,7 @@ jobs:
 
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
-          GITHUB_TOKEN: README
+          GITHUB_TOKEN: token
           USERNAME: nkcfe
 
       - name: Commit & Push
