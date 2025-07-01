@@ -1,0 +1,27 @@
+name: GitHub Profile 3D Contrib
+
+on:
+  schedule:
+    # 매일 한국시간 오전 3시 (UTC 18:00)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate GitHub Profile 3D Contrib
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: README
+          USERNAME: nkcfe
+
+      - name: Commit & Push
+        run: |
+          git config user.name "Jade-Good"
+          git config user.email "kangsm423@gmail.com"
+          git add -A
+          git commit -m "Generated 3D Contribution Graph" || echo "Nothing to commit"
+          git push
